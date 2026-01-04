@@ -21,8 +21,9 @@ Feature: La barra de navegacion me permite navegar a todas las subsecciones
   #      And Select Introducción al Testing
  
       Scenario: Users can select a plan when signing up
-          Given I navigate to www.freerangetester.com
-          When I go to Elegir plan
+         Given I navigate to www.freerangetester.com
+         When I go to Elegir plan
+         Then I can validate the options in  the checkout page
 
 
 
