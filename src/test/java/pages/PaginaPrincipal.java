@@ -5,7 +5,7 @@ public class PaginaPrincipal extends BasePage {
 
 
     private String sectionLink = "//a[normalize-space()='%s' and @href]";
-    private String elegirUnPlanButton = "//a[normalize-space()='Elegir Plan' and @href]";
+    private String elegirUnPlanButton = "//select[@id='formBasicSelect']";
 
     public PaginaPrincipal(){
         super(driver);
@@ -14,6 +14,11 @@ public class PaginaPrincipal extends BasePage {
 
     public void navigateToFreeRangeTesters(){
         navigateTo("https://www.freerangetesters.com/");
+        //clickElement(searchButtom);
+    }
+
+    public void navigateToFreeRangeTestersSanbox(){
+        navigateTo("https://thefreerangetester.github.io/sandbox-automation-testing/");
         //clickElement(searchButtom);
     }
 

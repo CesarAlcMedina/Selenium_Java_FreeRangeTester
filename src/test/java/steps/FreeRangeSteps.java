@@ -21,6 +21,11 @@ public class FreeRangeSteps {
             LandingPage.navigateToFreeRangeTesters();
         }
 
+        @Given("I navigate to www.freerangetestersanbox.com")
+        public void iNavigateToSandbox(){
+            LandingPage.navigateToFreeRangeTestersSanbox();
+        }
+
         @When("I go to {word} using the navigation bar")
         public void navigationBarUse(String section){
             LandingPage.clickOnSectionNavigationBar(section);
@@ -33,12 +38,12 @@ public class FreeRangeSteps {
         @And("Select Introducción al Testing")
         public void navigateToIntro(){
             //cursosPage.clickFundamentosTestingLink();
-            fundamentosPage.clickIntroduccionTestingLink();
+           // fundamentosPage.clickIntroduccionTestingLink();
         }
         @Then("I can validate the options in  the checkout page")
         public void validateCheckoutPlans(){
             List<String> Lista = registro.returnPlanDropdownValues();
-            List<String> ListaEsperada =  Arrays.asList("Plan Mensual", "Plan Trimestral", "Plan Semestral", "Plan Anual");
+            List<String> ListaEsperada =  Arrays.asList("Seleccioná un deporte", "Fútbol", "Tennis", "Basketball");
 
             Assert.assertEquals(Lista, ListaEsperada);
         }
