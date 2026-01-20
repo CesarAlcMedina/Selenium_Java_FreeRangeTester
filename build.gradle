@@ -47,8 +47,9 @@ java {
 
 
 tasks.named('test') {
-    // Use JUnit Platform for unit tests.
-    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+    systemProperty "cucumberOptions", System.getProperty("cucumber.options")
+    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
+  //  systemProperties System.getProperties();
 }
 ///añadiendo por recomendacion de gpt
 

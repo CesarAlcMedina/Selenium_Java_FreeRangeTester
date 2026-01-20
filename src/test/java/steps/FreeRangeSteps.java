@@ -47,5 +47,10 @@ public class FreeRangeSteps {
 
             Assert.assertEquals(Lista, ListaEsperada);
         }
+        
+        @Then("The user can validate the options in  the checkout page")
+        public void validateCheckoutPlansUser(){
+            validateCheckoutPlans();
+        }
 
 }

@@ -11,7 +11,7 @@ import pages.BasePage;
 @CucumberOptions(
     features="src/test/resources", //Este es el directorio de nuestros archivos .feature
     glue="steps",
-    plugin= {"pretty", "html:target/cucumber-reports"} //Este es el paquete donde se encuentran nuestros step definitions
+    plugin= {"pretty", "html:target/cucumber-reports"}, tags ="@Navigation" //Este es el paquete donde se encuentran nuestros step definitions
 )
 
 public class TestRunner { 

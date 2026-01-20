@@ -30,6 +30,16 @@ public class BasePage {
 
     public static void navigateTo(String url) {
         driver.get(url);
+        // Espera para que el usuario complete manualmente el desafío de Cloudflare
+        System.out.println("\n⚠️  Esperando 5 segundos para que completes el desafío de Cloudflare...");
+        System.out.println("   Por favor, haz clic en 'Verify you are human' en el navegador.");
+        try {
+            Thread.sleep(5000); // 60 segundos
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            System.out.println("⚠️  Espera interrumpida.");
+        }
+        System.out.println("✅ Continuando con el test...\n");
     }
 
     public static void closeBrowser(){
